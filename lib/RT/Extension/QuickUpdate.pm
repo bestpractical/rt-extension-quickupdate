@@ -18,7 +18,7 @@ RT::Extension::QuickUpdate - Adds an update box to ticket display
 
     1. Run "perl Makefile.PL".
     2. Run "make install".
-    3. Add "RT::Extension::Journyx" to @Plugins in RT_SiteConfig.pm.
+    3. Add "RT::Extension::QuickUpdate" to @Plugins in RT_SiteConfig.pm.
     4. Clear Mason's cache.
     5. Restart RT.
 
