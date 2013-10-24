@@ -56,7 +56,7 @@
   </tr>
   <tr>
       <td class="label"><&|/l&>Priority</&>:</td>
-      <td class="value"><input name="Priority" value="<%$Ticket->Priority|h%>" size="5" /></td>
+      <td class="value"><& /Elements/SelectPriority, Name => "Priority", Default => $ARGS{Priority} &> </td>
     </tr>
   <tr>
   <td class="label">
