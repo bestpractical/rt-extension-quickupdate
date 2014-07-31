@@ -1,0 +1,4 @@
+0.02 2014-07-31
+ - Actually make PriorityAsStringOrder optional, as the documentation
+   claimed
+ - Packaging updates

@@ -1,5 +1,4 @@
 *.swp
-MANIFEST
 MANIFEST.bak
 Makefile
 Makefile.old
