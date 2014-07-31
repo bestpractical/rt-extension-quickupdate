@@ -5,58 +5,71 @@ use warnings;
 our $VERSION = '0.01';
 
 1;
-
-__END__
-
 =head1 NAME
 
 RT::Extension::QuickUpdate - Adds an update box to ticket display
 
-=head1 SYNOPSIS
+=head1 DESCRIPTION
 
-    Installation instructions for RT-Extension-QuickUpdate:
+[Why would someone install this extension? What does it do? What problem
+does it solve?]
 
-    1. Run "perl Makefile.PL".
-    2. Run "make install".
-    3. Add "RT::Extension::QuickUpdate" to @Plugins in RT_SiteConfig.pm.
-    4. Clear Mason's cache.
-    5. Restart RT.
+=head1 RT VERSION
 
-    A quick update box will appear at the top of the ticket display page.
-    
+Works with all releases of RT 4.0 and 4.2.
+
+=head1 INSTALLATION
+
+=over
+
+=item C<perl Makefile.PL>
+
+=item C<make>
+
+=item C<make install>
+
+May need root permissions
+
+=item Edit your F</opt/rt4/etc/RT_SiteConfig.pm>
+
+If you are using RT 4.2 or greater, add this line:
+
+    Plugin('RT::Extension::QuickUpdate');
+
+For RT 4.0, add this line:
+
+    Set(@Plugins, qw(RT::Extension::QuickUpdate));
+
+or add C<RT::Extension::QuickUpdate> to your existing C<@Plugins> line.
+
+=item Clear your mason cache
+
+    rm -rf /opt/rt4/var/mason_data/obj
+
+=item Restart your webserver
+
+=back
+
 =head1 AUTHOR
 
-Shawn M Moore  C<< <sartak@bestpractical.com> >>
+Best Practical Solutions, LLC E<lt>modules@bestpractical.comE<gt>
 
-=head1 LICENCE AND COPYRIGHT
+=head1 BUGS
 
-Copyright (c) 2010, Best Practical Solutions, LLC.  All rights reserved.
+All bugs should be reported via email to
 
-This module is free software; you can redistribute it and/or
-modify it under the same terms as Perl itself. See L<perlartistic>.
+    L<bug-RT-Extension-QuickUpdate@rt.cpan.org|mailto:bug-RT-Extension-QuickUpdate@rt.cpan.org>
 
-=head1 DISCLAIMER OF WARRANTY
+or via the web at
 
-BECAUSE THIS SOFTWARE IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
-FOR THE SOFTWARE, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN
-OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
-PROVIDE THE SOFTWARE "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
-EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE
-ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH
-YOU. SHOULD THE SOFTWARE PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL
-NECESSARY SERVICING, REPAIR, OR CORRECTION.
+    L<rt.cpan.org|http://rt.cpan.org/Public/Dist/Display.html?Name=RT-Extension-QuickUpdate>.
 
-IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
-WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
-REDISTRIBUTE THE SOFTWARE AS PERMITTED BY THE ABOVE LICENCE, BE
-LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL,
-OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE
-THE SOFTWARE (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING
-RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A
-FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
-SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
-SUCH DAMAGES.
+=head1 LICENSE AND COPYRIGHT
+
+This software is Copyright (c) 2010-2014 by Best Practical Solutions
+
+This is free software, licensed under:
+
+  The GNU General Public License, Version 2, June 1991
 
 =cut
-
