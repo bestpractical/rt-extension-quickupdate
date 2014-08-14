@@ -11,8 +11,9 @@ RT::Extension::QuickUpdate - Adds an update box to ticket display
 
 =head1 DESCRIPTION
 
-[Why would someone install this extension? What does it do? What problem
-does it solve?]
+This adds an update box to the ticket display page allowing one to quickly
+change: i) status; ii) owner; iii) priority; and iv) queue; instead of
+needing to browse between tabs in order to do so.
 
 =head1 RT VERSION
 
