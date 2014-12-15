@@ -2,9 +2,10 @@ package RT::Extension::QuickUpdate;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '1.00';
 
 1;
+
 =head1 NAME
 
 RT::Extension::QuickUpdate - Adds an update box to ticket display
