@@ -18,7 +18,7 @@ needing to browse between tabs in order to do so.
 
 =head1 RT VERSION
 
-Works with all releases of RT 4.0 and 4.2.
+Works with all releases of RT 4.
 
 =head1 INSTALLATION
 
