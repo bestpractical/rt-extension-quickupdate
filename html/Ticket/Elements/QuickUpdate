@@ -47,7 +47,7 @@
 <input type="hidden" class="hidden" name="id" value="<% $Ticket->id %>" />
 <table>
   <tr>
- <td class="label"><&|/l&>Status</&>:</td><td> <& /Elements/SelectStatus, Name => 'Status', DefaultLabel => loc("[_1] (Unchanged)", loc($Ticket->Status)) &> </td>
+ <td class="label"><&|/l&>Status</&>:</td><td> <& $status_comp, Name => 'Status', TicketObj => $Ticket, @extra &> </td>
   </tr>
   <tr>
   <td class="label">
@@ -66,6 +66,16 @@
 </table>
 <%INIT>
 my $Ticket = LoadTicket($id);
+
+# Default to the 4.0 form
+my @extra = (DefaultLabel => loc("[_1] (Unchanged)", loc($Ticket->Status)));
+my $status_comp = "/Elements/SelectStatus";
+
+# ..but prefer the 4.2 and higher widget if possible.
+if ($m->comp_exists("/Ticket/Elements/SelectStatus")) {
+  $status_comp = "/Ticket/Elements/SelectStatus";
+  @extra = ();
+}
 
 my $Queue = $Ticket->QueueObj;
 </%INIT>
