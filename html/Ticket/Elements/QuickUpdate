@@ -47,7 +47,7 @@
 <input type="hidden" class="hidden" name="id" value="<% $Ticket->id %>" />
 <table>
   <tr>
- <td class="label">Status:</td><td> <& /Elements/SelectStatus, Name => 'Status', DefaultLabel => loc("[_1] (Unchanged)", loc($Ticket->Status)) &> </td>
+ <td class="label"><&|/l&>Status</&>:</td><td> <& /Elements/SelectStatus, Name => 'Status', DefaultLabel => loc("[_1] (Unchanged)", loc($Ticket->Status)) &> </td>
   </tr>
   <tr>
   <td class="label">
