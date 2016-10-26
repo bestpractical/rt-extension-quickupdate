@@ -2,7 +2,7 @@ package RT::Extension::QuickUpdate;
 use strict;
 use warnings;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 1;
 
@@ -68,7 +68,7 @@ or via the web at
 
 =head1 LICENSE AND COPYRIGHT
 
-This software is Copyright (c) 2010-2014 by Best Practical Solutions
+This software is Copyright (c) 2010-2016 by Best Practical Solutions
 
 This is free software, licensed under:
 
