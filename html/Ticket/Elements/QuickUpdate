@@ -60,7 +60,7 @@
     </tr>
   <tr>
   <td class="label">
-<&|/l&>Queue</&>:</td><td> <& /Elements/SelectQueue, Name => 'Queue', Default => $Ticket->QueueObj->Id &>
+<&|/l&>Queue</&>:</td><td> <& /Elements/SelectQueue, Name => 'Queue', Default => $Ticket->QueueObj->Id, ShowNullOption => 0 &>
   </td>
   </tr>
 </table>
