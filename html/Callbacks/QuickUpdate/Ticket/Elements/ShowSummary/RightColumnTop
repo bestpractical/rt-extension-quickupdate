@@ -3,7 +3,6 @@ $Ticket
 </%ARGS>
 <&|/Widgets/TitleBox,
     title => loc("Quick Update"),
-    title_href =>"$RT::WebPath/Ticket/QuickUpdate.html?id=".$Ticket->Id,
     class => 'ticket-info-reminders'
 &>
     <form action="<%$RT::WebPath%>/Ticket/Display.html" method="post">
