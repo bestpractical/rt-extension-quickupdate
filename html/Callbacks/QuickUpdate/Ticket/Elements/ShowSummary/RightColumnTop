@@ -7,6 +7,6 @@ $Ticket
 &>
     <form action="<%$RT::WebPath%>/Ticket/Display.html" method="post">
         <& /Ticket/Elements/QuickUpdate, Ticket => $Ticket, id => $Ticket->Id  &>
-        <div align="right"><input type="submit" class="button" value="Save" /></div>
+        <div align="right"><input type="submit" class="button" value="<% loc("Save") %>" /></div>
     </form>
 </&>
