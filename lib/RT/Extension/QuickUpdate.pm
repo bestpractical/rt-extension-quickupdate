@@ -4,6 +4,17 @@ use warnings;
 
 our $VERSION = '1.01';
 
+$RT::Config::META{'QuickUpdate'} = {
+    Section         => 'Ticket display',
+    Overridable     => 1,
+    Widget          => '/Widgets/Form/Boolean',
+    WidgetArguments => {
+        Description => 'Display a Quickupdate Widget on Ticket Display Page', # loc
+        Hints       => '(' . __PACKAGE__ . ')',
+    },
+};
+
+
 1;
 
 =head1 NAME

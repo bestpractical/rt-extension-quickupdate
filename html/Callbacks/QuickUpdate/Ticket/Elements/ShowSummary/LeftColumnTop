@@ -1,3 +1,7 @@
+<%init>
+return unless RT->Config->Get( 'QuickUpdate', $session{'CurrentUser'} );
+</%init>
+
 <%ARGS>
 $Ticket
 </%ARGS>
